@@ -14,6 +14,7 @@ body{
     flex-direction: column;
     height: 100vh;
     width: 100vw;
+    user-select: none;
 }
 
 .title{
@@ -51,6 +52,14 @@ body{
     font-size: 16px;
     color: #fff;
     cursor: pointer;
+    opacity: .6;
+    pointer-events: none;
+}
+
+/*JS*/
+.add-list.active{
+    opacity: 1;
+    pointer-events: all;
 }
 .tasks{
     width: 100%;
@@ -72,12 +81,12 @@ body{
     letter-spacing: 1px;
 }
 
-/*js*/
-/*
+/*JS*/
+
 .item.completed p{
     text-decoration: line-through;
     color: #11111180;
-}*/
+}
 
 .item-btn{
     display: flex;
@@ -88,4 +97,37 @@ body{
     color: rgb(8, 6, 133);
     font-size: 18px;
     cursor: pointer;
+}
+
+footer {
+    min-height: 20vh;
+}
+
+.footer-container {
+    position: relative;
+    top: 37.5vh;
+}
+  
+.footer-text {
+    display: flex;
+    justify-content: center;
+}
+  
+.footer-text p {
+    color: #000000;
+}
+  
+.footer-images-container {
+    display: flex;
+    justify-content: center;
+}
+  
+.footer-images img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+  
+.footer-images {
+    filter: invert(0.5);
+    margin: 0 0.5rem;
 }
