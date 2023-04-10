@@ -22,14 +22,14 @@ addBtn.addEventListener('click', () => {
         `
         <p> ${input.value} </p>
         <div class="item-btn">
-            <i class="fa-solid fa-check"></i>
-            <i class="fa-solid fa-xmark"></i>
+        <i class="fa-solid fa-check"></i>
+        <i class="fa-solid fa-xmark"></i>
         </div>
         `
         tasks.appendChild(newItem);
         input.value = '';
     } else{
-        alert('Please, enter a task.');
+        msj.innerHTML = `Please, enter a task.`;
     }
 });
 
@@ -47,4 +47,22 @@ tasks.addEventListener('click', (e) => {
     if (e.target.classList.contains('fa-check')) {
         e.target.parentElement.parentElement.classList.toggle('completed');
     }
+});
+
+//Dark mode button
+const btnDarkMode = document.querySelector('#switch');
+let task = document.querySelector('#Tasks');
+let itemBtn = document.querySelector('#item-btn');
+let add = document.querySelector('#Add-list');
+let title = document.querySelector('#title');
+let footerTxt = document.querySelector('#footer-text');
+
+btnDarkMode.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    task.classList.toggle('dark');
+    itemBtn.classList.toggle('dark');
+    add.classList.toggle('dark');
+    title.classList.toggle('dark');
+    footerTxt.classList.toggle('dark');
+    btnDarkMode.classList.toggle('active');
 });

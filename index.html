@@ -6,28 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <title>To Do List App</title>
 </head>
 <body>
-    
-    <h1 class="title">To Do List App</h1>
+    <nav>
+        <div class="enlace">
+            <button class="switch" id="switch">
+                <span>
+                    <i class="fa-solid fa-sun"></i>
+                </span>
+                <span>
+                    <i class="fa-solid fa-moon"></i>
+                </span>
+            </button>
+        </div>
+    </nav>
+    <h1 class="title" id="title">To Do List App</h1>
     
     <div class="todo-list">
+        <div>
+            <h3 class="msj" id="msj"></h3>
+        </div>
         <div class="list-head">
             <input type="text" class="entered-list" id="Entered-list">
             <button class="add-list" id="Add-list"> Add </button>
         </div>
         
         <div class="tasks" id="Tasks">
-            <!-- 
-                <div class="item">
-                    <p>New item here</p>
-                    <div class="item-btn">
-                        <i class="fa-duotone fa-check"></i>
-                        <i class="fa-solid fa-xmark"></i>
-                    </div> 
+            
+                <div class="item" id="item">
+                    <!-- <p>New item here</p> -->
+                    <div class="item-btn" id="item-btn">
+                        <!-- <i class="fa-duotone fa-check"></i>
+                        <i class="fa-solid fa-xmark"></i> -->
+                    </div>  
                 </div> 
-            -->
+            
         </div>
     </div>
     
@@ -46,7 +61,7 @@
                     </a>
                 </div>
             </div>
-            <div class="footer-text">
+            <div class="footer-text" id="footer-text">
                 <p>©Copyright 2023. All rights reserved.</p>
             </div>
         </div>
