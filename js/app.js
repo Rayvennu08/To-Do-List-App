@@ -52,17 +52,17 @@ tasks.addEventListener('click', (e) => {
 //Dark mode button
 const btnDarkMode = document.querySelector('#switch');
 let task = document.querySelector('#Tasks');
-let itemBtn = document.querySelector('#item-btn');
 let add = document.querySelector('#Add-list');
 let title = document.querySelector('#title');
 let footerTxt = document.querySelector('#footer-text');
+let item = document.querySelector('#item');
 
 btnDarkMode.addEventListener('click', () => {
     document.body.classList.toggle('dark');
     task.classList.toggle('dark');
-    itemBtn.classList.toggle('dark');
     add.classList.toggle('dark');
     title.classList.toggle('dark');
     footerTxt.classList.toggle('dark');
+    item.classList.toggle('dark');
     btnDarkMode.classList.toggle('active');
 });
